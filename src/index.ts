@@ -39,9 +39,10 @@ export const useJsonParam = <T>(...opts: Options) => {
     [key, searchParams, setSearchParams]
   );
 
-  return useMemo<
-    [T | undefined, (newQuery: T, options?: NavigateOptions) => void]
-  >(() => [value, setValue], [value, setValue]);
+  return useMemo<[T | {}, (newQuery: T, options?: NavigateOptions) => void]>(
+    () => [value, setValue],
+    [value, setValue]
+  );
 };
 
 export const useJSONParam = useJsonParam;
