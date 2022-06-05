@@ -1,5 +1,6 @@
 {
   "name": "use-json-param",
+  "version": "1.0.0",
   "description": "Little wrapper around useSearchParams for large JSON objects",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
