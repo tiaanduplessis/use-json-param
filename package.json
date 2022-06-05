@@ -1,0 +1,61 @@
+{
+  "name": "use-json-param",
+  "description": "Little wrapper around useSearchParams for large JSON objects",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "scripts": {
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "build": "rm -rf dist && tsup src/index.ts --format cjs,esm --dts --target node16",
+    "prepublishOnly": "npm run build",
+    "types:check": "tsc --noEmit",
+    "format": "pretty-quick --ignore-path .gitignore",
+    "size": "dist-size"
+  },
+  "keywords": [
+    "use-query-params",
+    "use-search-params",
+    "json-params",
+    "use-json-param"
+  ],
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/tiaanduplessis/use-json-param#readme",
+  "bugs": {
+    "url": "https://github.com/tiaanduplessis/use-json-param/issues"
+  },
+  "repository": {
+    "url": "tiaanduplessis/use-json-param",
+    "type": "git"
+  },
+  "author": "tiaanduplessis",
+  "license": "MIT",
+  "dependencies": {
+    "deepmerge": "^4.2.2",
+    "jsoncrush": "^1.1.6"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "devDependencies": {
+    "@testing-library/react-hooks": "^8.0.0",
+    "@types/react": "^18.0.11",
+    "dist-size": "^0.4.0",
+    "jsdom": "^19.0.0",
+    "prettier": "^2.6.2",
+    "pretty-quick": "^3.1.3",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0",
+    "react-test-renderer": "^16.9.0",
+    "tsup": "^6.0.1",
+    "typescript": "^4.7.3",
+    "vitest": "^0.13.1"
+  },
+  "peerDependencies": {
+    "react": ">= 16.3",
+    "react-router-dom": ">= 6"
+  }
+}
